@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Claude Go-To is a practical, visual learning hub for reliable AI-assisted development workflows." />
+    <meta name="theme-color" content="#0c1713" />
+    <meta property="og:title" content="Claude Go-To — Practical AI development workflows" />
+    <meta property="og:description" content="A visual learning hub for prompts, project context, reusable skills, agents, and quality checks." />
+    <meta property="og:type" content="website" />
+    <title>Claude Go-To | Build better AI workflows</title>
+    <link rel="icon" href="assets/compass-mark.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Claude Go-To home">
+        <span class="brand-mark"><img src="assets/compass-mark.svg" alt="" width="32" height="32" /></span>
+        <span>Claude <strong>Go-To</strong></span>
+      </a>
+      <div class="header-actions">
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#roadmap">Roadmap</a>
+          <a href="#lessons">Lessons</a>
+          <a href="#assessment">Assessment</a>
+          <a data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <span class="theme-icon theme-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-moon" aria-hidden="true">☾</span>
+          <span class="theme-label">Theme</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="sr-only">Open navigation</span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse"></span> An independent learning resource</p>
+          <h1>Build an AI workflow your <em>whole team</em> can trust.</h1>
+          <p class="lede">
+            Claude Go-To turns scattered prompts and one-off experiments into a calm, repeatable
+            system for planning, building, reviewing, and shipping software.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#roadmap">Choose your path <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#lessons">Explore the lessons <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof" aria-label="Project highlights">
+            <div><strong>10</strong><span>hands-on modules</span></div>
+            <div><strong>0</strong><span>dependencies to install</span></div>
+            <div><strong>∞</strong><span>room to make it yours</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay" aria-label="Example AI development workflow">
+          <div class="workspace-window">
+            <div class="window-bar"><span></span><span></span><span></span><p>claude-go-to / workflow</p><i>● Live</i></div>
+            <div class="workspace-body">
+              <aside class="workspace-sidebar">
+                <small>WORKSPACE</small>
+                <p class="active"><b>◇</b> New feature</p>
+                <p><b>□</b> Context</p>
+                <p><b>△</b> Review</p>
+                <p><b>○</b> Release</p>
+              </aside>
+              <div class="workspace-main">
+                <p class="code-label">/delivery-plan</p>
+                <h2>Ship a change with clarity.</h2>
+                <p>Explore the codebase, agree the plan, validate the work, then leave a useful handoff.</p>
+                <div class="workflow-list">
+                  <div><span>01</span><b>Map the change</b><i>complete</i></div>
+                  <div><span>02</span><b>Build in a clear boundary</b><i>in progress</i></div>
+                  <div><span>03</span><b>Run focused checks</b><i>queued</i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-note"><span>✦</span><p>Make the good path<br /><strong>the easy path.</strong></p></div>
+        </div>
+      </section>
+
+      <section class="value-strip">
+        <div class="section-shell value-inner">
+          <p>From an empty prompt</p><span>→</span><p>to a visible system</p><span>→</span><p>to confident delivery</p>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section-shell roadmap">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Find your starting point</p>
+          <h2>Start where the friction is.</h2>
+          <p>Pick the path that solves your next real problem—not the one that tries to teach everything at once.</p>
+        </div>
+        <div class="path-layout">
+          <div class="path-tabs reveal" role="tablist" aria-label="Learning paths">
+            <button class="path-card is-selected" role="tab" aria-selected="true" data-path="beginner">
+              <span class="path-number">01</span><span><strong>Foundation</strong><small>Prompts and context</small></span><b>→</b>
+            </button>
+            <button class="path-card" role="tab" aria-selected="false" data-path="intermediate">
+              <span class="path-number">02</span><span><strong>Practice</strong><small>Skills and quality gates</small></span><b>→</b>
+            </button>
+            <button class="path-card" role="tab" aria-selected="false" data-path="advanced">
+              <span class="path-number">03</span><span><strong>Systems</strong><small>Agents and delivery loops</small></span><b>→</b>
+            </button>
+          </div>
+          <div id="path-detail" class="path-detail reveal" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="lessons" class="lessons-section">
+        <div class="section-shell">
+          <div class="lessons-heading reveal">
+            <div>
+              <p class="eyebrow">The field guide</p>
+              <h2>A small set of skills. A meaningful difference.</h2>
+            </div>
+            <p>Each lesson is short, concrete, and designed to leave you with something useful in your repository.</p>
+          </div>
+          <div id="module-grid" class="module-grid"></div>
+        </div>
+      </section>
+
+      <section class="section-shell operating-system">
+        <div class="operating-copy reveal">
+          <p class="eyebrow">A calm operating system</p>
+          <h2>Good AI work is still good engineering.</h2>
+          <p>Useful context, focused boundaries, small checks, and clear decisions matter just as much as the model you use.</p>
+          <a class="button button-secondary" href="guides/09-delivery-systems.md">Read the delivery guide <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="principles reveal reveal-delay">
+          <article><span>01</span><h3>Make context visible</h3><p>Write down what a new teammate would need to act safely.</p></article>
+          <article><span>02</span><h3>Keep scope deliberate</h3><p>Give each prompt, skill, or role a clear boundary and outcome.</p></article>
+          <article><span>03</span><h3>Check at the right moment</h3><p>Run the smallest useful validation before the change becomes expensive.</p></article>
+        </div>
+      </section>
+
+      <section id="assessment" class="assessment-section">
+        <div class="section-shell assessment-layout">
+          <div class="assessment-copy reveal">
+            <p class="eyebrow">Quick self-assessment</p>
+            <h2>What would make your next task easier?</h2>
+            <p>Three quick answers point you to the most valuable next lesson.</p>
+          </div>
+          <form id="assessment-form" class="assessment-card reveal reveal-delay">
+            <fieldset>
+              <legend>Do you keep project instructions in one shared place?</legend>
+              <label><input type="radio" name="context" value="0" /> Not yet</label>
+              <label><input type="radio" name="context" value="1" /> Yes, consistently</label>
+            </fieldset>
+            <fieldset>
+              <legend>Do your repeated tasks have a reusable method?</legend>
+              <label><input type="radio" name="repeat" value="0" /> Usually not</label>
+              <label><input type="radio" name="repeat" value="1" /> Yes, for most work</label>
+            </fieldset>
+            <fieldset>
+              <legend>Does independent work have a clear review step?</legend>
+              <label><input type="radio" name="agents" value="0" /> Not reliably</label>
+              <label><input type="radio" name="agents" value="1" /> Yes</label>
+            </fieldset>
+            <div class="assessment-action">
+              <button class="button button-primary" type="submit">Get my recommendation <span aria-hidden="true">→</span></button>
+              <p id="assessment-result" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-shell launch-section reveal">
+        <div>
+          <p class="eyebrow">Open source and yours to adapt</p>
+          <h2>Turn this guide into your team’s go-to playbook.</h2>
+        </div>
+        <div class="launch-actions">
+          <a class="button button-primary" data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">View on GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="GITHUB_SETUP.md">Publish your own version <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <div>
+          <a class="brand" href="#top"><span class="brand-mark"><img src="assets/compass-mark.svg" alt="" width="28" height="28" /></span><span>Claude <strong>Go-To</strong></span></a>
+          <p>Practical workflows for thoughtful AI-assisted development.</p>
+        </div>
+        <div class="footer-links">
+          <a href="NOTICE.md">Project notice</a>
+          <a href="LICENSE">MIT License</a>
+          <a data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">Repository</a>
+        </div>
+        <p class="legal">Unofficial educational project. “Claude” is a trademark of Anthropic; this site is not affiliated with or endorsed by Anthropic.</p>
+      </div>
+    </footer>
+    <script src="site-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

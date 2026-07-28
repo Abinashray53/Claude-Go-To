@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Claude Go-To is a visual, hands-on learning hub for building effective AI-assisted development workflows."
+    />
+    <meta name="theme-color" content="#071710" />
+    <meta property="og:title" content="Claude Go-To — Learn AI-assisted development workflows" />
+    <meta
+      property="og:description"
+      content="A practical learning path for commands, context, skills, agents, automations, and extensions."
+    />
+    <meta property="og:type" content="website" />
+    <title>Claude Go-To | Practical AI Development Workflows</title>
+    <link rel="icon" href="assets/compass-mark.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Claude Go-To home">
+        <img src="assets/compass-mark.svg" alt="" width="38" height="38" />
+        <span>Claude <strong>Go-To</strong></span>
+      </a>
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Open menu</span><span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#roadmap">Roadmap</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#start">Start here</a>
+        <a data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">A practical learning companion</p>
+          <h1>Turn AI coding assistance into a <em>repeatable</em> workflow.</h1>
+          <p class="lede">
+            Learn how to structure prompts, persistent context, reusable skills, specialist agents,
+            checks, and integrations into a development system that keeps getting better.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#start">Start in 15 minutes <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#catalog">Explore the catalog</a>
+          </div>
+          <p class="microcopy">Free, static, and ready for GitHub Pages.</p>
+        </div>
+        <div class="hero-panel" aria-label="Learning workflow diagram">
+          <div class="panel-top"><span class="status-dot"></span> workflow.map</div>
+          <div class="workflow">
+            <div class="workflow-node start-node">Your project</div>
+            <div class="workflow-line"></div>
+            <div class="workflow-grid">
+              <div class="workflow-node">Context</div>
+              <div class="workflow-node">Skills</div>
+              <div class="workflow-node">Agents</div>
+              <div class="workflow-node">Checks</div>
+            </div>
+            <div class="workflow-line"></div>
+            <div class="workflow-node outcome-node">Confident delivery <span>↗</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust section-shell" aria-label="What this guide includes">
+        <div><strong>10</strong><span>focused learning modules</span></div>
+        <div><strong>15 min</strong><span>to first useful workflow</span></div>
+        <div><strong>100%</strong><span>static and deployable</span></div>
+      </section>
+
+      <section id="roadmap" class="section-shell split-section">
+        <div>
+          <p class="eyebrow">Find your starting point</p>
+          <h2>Pick a path that matches where you are.</h2>
+          <p class="section-copy">
+            Don’t learn every feature at once. Start with the smallest set that solves your next
+            real development task, then add capability as it becomes useful.
+          </p>
+        </div>
+        <div class="path-selector" role="tablist" aria-label="Learning paths">
+          <button class="path-card is-selected" role="tab" aria-selected="true" data-path="beginner">
+            <span>01</span><strong>Beginner</strong><small>Commands and project context</small>
+          </button>
+          <button class="path-card" role="tab" aria-selected="false" data-path="intermediate">
+            <span>02</span><strong>Intermediate</strong><small>Skills, checks, and integrations</small>
+          </button>
+          <button class="path-card" role="tab" aria-selected="false" data-path="advanced">
+            <span>03</span><strong>Advanced</strong><small>Agent teams and delivery systems</small>
+          </button>
+        </div>
+        <div id="path-detail" class="path-detail" aria-live="polite"></div>
+      </section>
+
+      <section id="start" class="section-shell quickstart">
+        <div class="quickstart-title">
+          <p class="eyebrow">Get started in 15 minutes</p>
+          <h2>Publish your learning hub.</h2>
+          <p>Update one config file, push this folder to GitHub, then enable GitHub Pages.</p>
+        </div>
+        <div class="code-card">
+          <div class="code-card-header"><span>Terminal</span><button class="copy-button" data-copy-target="setup-command">Copy</button></div>
+          <pre><code id="setup-command">git clone https://github.com/YOUR_GITHUB_USERNAME/claude-go-to.git
+cd claude-go-to
+# Edit site-config.js, then publish with GitHub Pages</code></pre>
+        </div>
+      </section>
+
+      <section id="catalog" class="section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Feature catalog</p>
+            <h2>Build your workflow, one capability at a time.</h2>
+          </div>
+          <p class="section-copy">Every module includes a goal, a concrete practice, and a next step.</p>
+        </div>
+        <div id="module-grid" class="module-grid"></div>
+      </section>
+
+      <section class="section-shell practice-section">
+        <div class="practice-intro">
+          <p class="eyebrow">Quick self-check</p>
+          <h2>What should you learn next?</h2>
+          <p>Answer three questions to get a useful starting recommendation.</p>
+        </div>
+        <form id="assessment" class="assessment">
+          <fieldset>
+            <legend>Do you keep project instructions in a shared file?</legend>
+            <label><input type="radio" name="context" value="0" /> Not yet</label>
+            <label><input type="radio" name="context" value="1" /> Yes</label>
+          </fieldset>
+          <fieldset>
+            <legend>Do you repeat the same prompt or review steps?</legend>
+            <label><input type="radio" name="repeat" value="0" /> Often</label>
+            <label><input type="radio" name="repeat" value="1" /> Rarely</label>
+          </fieldset>
+          <fieldset>
+            <legend>Do you delegate independent tasks to specialist agents?</legend>
+            <label><input type="radio" name="agents" value="0" /> Not yet</label>
+            <label><input type="radio" name="agents" value="1" /> Yes</label>
+          </fieldset>
+          <button class="button button-primary" type="submit">Get my next module</button>
+          <p id="assessment-result" class="assessment-result" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section-shell callout">
+        <div>
+          <p class="eyebrow">Make it yours</p>
+          <h2>Use this as the front door to your team’s operating playbook.</h2>
+        </div>
+        <a class="button button-primary" data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">
+          Open the repository <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="brand footer-brand"><img src="assets/compass-mark.svg" alt="" width="30" height="30" /><span>Claude <strong>Go-To</strong></span></div>
+      <p>Unofficial educational resource. “Claude” is a trademark of Anthropic; this project is not affiliated with or endorsed by Anthropic.</p>
+      <p>Built for <a data-github-link href="https://github.com/YOUR_GITHUB_USERNAME/claude-go-to">YOUR_GITHUB_USERNAME</a> · <a href="LICENSE">MIT License</a></p>
+    </footer>
+
+    <script src="site-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
