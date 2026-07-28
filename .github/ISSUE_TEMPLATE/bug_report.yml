@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a problem in the Claude Go-To website or guide content.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Claude Go-To.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and the expected result.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or guide
+      placeholder: https://YOUR_GITHUB_USERNAME.github.io/claude-go-to/
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Other

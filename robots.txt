@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://abinashray53.github.io/claude-go-to/sitemap.xml

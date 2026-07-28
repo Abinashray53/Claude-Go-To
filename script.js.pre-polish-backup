@@ -1,0 +1,84 @@
+(() => {
+  const config = window.CLAUDE_GOTO_CONFIG || {};
+  const repositoryUrl = `https://github.com/${config.githubOwner || "YOUR_GITHUB_USERNAME"}/${config.repository || "claude-go-to"}`;
+
+  document.querySelectorAll("[data-github-link]").forEach((link) => {
+    link.href = repositoryUrl;
+  });
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+  menuButton?.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+
+  const paths = {
+    beginner: "<strong>Beginner path · about 2 hours.</strong> Start with Module 1, then make your project context visible in Module 2. You will finish with one reusable workflow.",
+    intermediate: "<strong>Intermediate path · about 4 hours.</strong> Turn repeated work into reusable skills, introduce quality gates, and connect the tools your team already uses.",
+    advanced: "<strong>Advanced path · about 6 hours.</strong> Design specialist roles, coordinate independent work safely, and build an auditable delivery loop."
+  };
+  const pathDetail = document.querySelector("#path-detail");
+  const selectPath = (path) => {
+    pathDetail.innerHTML = paths[path];
+    document.querySelectorAll("[data-path]").forEach((button) => {
+      const selected = button.dataset.path === path;
+      button.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-selected", String(selected));
+    });
+  };
+  document.querySelectorAll("[data-path]").forEach((button) => {
+    button.addEventListener("click", () => selectPath(button.dataset.path));
+  });
+  selectPath("beginner");
+
+  const modules = [
+    ["01", "Prompt playbooks", "Turn reliable prompts into fast, repeatable starting points.", "20 min"],
+    ["02", "Project context", "Give each session the architecture, conventions, and boundaries it needs.", "30 min"],
+    ["03", "Reusable skills", "Package a repeatable method so good work is easy to repeat.", "40 min"],
+    ["04", "Specialist agents", "Split independent work among focused roles with clear handoffs.", "45 min"],
+    ["05", "Tool connections", "Connect the right source of truth without adding unnecessary access.", "35 min"],
+    ["06", "Quality gates", "Run checks at the moments they offer the most value.", "35 min"],
+    ["07", "Extensions", "Bundle an opinionated team workflow into something easy to install.", "40 min"],
+    ["08", "Checkpoints", "Create safe points for ambitious changes and fast reversals.", "25 min"],
+    ["09", "Delivery systems", "Combine roles, tools, and review steps into a dependable loop.", "50 min"],
+    ["10", "Command-line fluency", "Use the terminal efficiently while keeping work visible and controlled.", "25 min"]
+  ];
+  const grid = document.querySelector("#module-grid");
+  grid.innerHTML = modules.map(([number, title, description, time]) => `
+    <article class="module-card">
+      <div class="module-meta"><span>MODULE ${number}</span><span>${time}</span></div>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <a class="module-link" href="guides/${number}-${title.toLowerCase().replaceAll(" ", "-")}.md">Open guide →</a>
+    </article>`).join("");
+
+  const copyButton = document.querySelector(".copy-button");
+  copyButton?.addEventListener("click", async () => {
+    const source = document.querySelector("#setup-command").textContent;
+    try {
+      await navigator.clipboard.writeText(source);
+      copyButton.textContent = "Copied";
+    } catch {
+      copyButton.textContent = "Select text";
+    }
+    window.setTimeout(() => { copyButton.textContent = "Copy"; }, 1800);
+  });
+
+  document.querySelector("#assessment")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const answers = new FormData(event.currentTarget);
+    const values = ["context", "repeat", "agents"].map((name) => answers.get(name));
+    const result = document.querySelector("#assessment-result");
+    if (values.includes(null)) {
+      result.textContent = "Choose one answer for each question first.";
+      return;
+    }
+    const score = values.map(Number).reduce((total, value) => total + value, 0);
+    result.textContent = score === 0
+      ? "Start with Module 1: Prompt playbooks."
+      : score < 3
+        ? "Start with Module 3: Reusable skills."
+        : "Start with Module 4: Specialist agents.";
+  });
+})();

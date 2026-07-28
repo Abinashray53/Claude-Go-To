@@ -1,0 +1,17 @@
+{
+  "name": "Claude Go-To",
+  "short_name": "Claude Go-To",
+  "description": "A practical learning hub for AI-assisted development workflows.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#06120d",
+  "theme_color": "#071710",
+  "icons": [
+    {
+      "src": "assets/compass-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

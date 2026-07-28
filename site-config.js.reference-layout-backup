@@ -1,0 +1,10 @@
+/*
+ * Change these values before publishing.
+ * GitHub URL and page metadata update automatically from this file.
+ */
+window.CLAUDE_GOTO_CONFIG = {
+  githubOwner: "YOUR_GITHUB_USERNAME",
+  repository: "claude-go-to",
+  siteUrl: "https://YOUR_GITHUB_USERNAME.github.io/claude-go-to/",
+  contactEmail: "hello@example.com"
+};
