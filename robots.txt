@@ -1,3 +1,4 @@
 ﻿User-agent: *
 Allow: /
-Sitemap: https://abinashray53.github.io/claude-go-to/sitemap.xml
+Sitemap: https://abinashray53.github.io/Claude-Go-To/sitemap.xml
+
